@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 5 Performances of Michael Phelps</title>
+    <style>
+        body{
+            background-color: coral;
+            padding: 10px;
+        }
+        h1{
+            color: green;
+            background-color: cadetblue;
+            text-align: center;
+            font-size: 60px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        table,th,td{
+            border: 1px solid;
+        }
+        table{
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1000px;
+            height: 500px;
+            background-color: crimson;
+        }
+        th{
+            font-size: 30px;
+            background-color: blue;
+            color: fuchsia;
+        }
+        td{
+            font-size: 20px;
+            color: yellow;
+        }
+        .edit{
+            font-size: 25px;
+            background-color: darkolivegreen;
+            color: darkred;
+        }
+        a{
+            font-size: 35px;
+            margin-left: 125px;
+            color: brown;
+            background-color: azure;
+        }
+        a:hover{
+            color: blueviolet;
+            background-color: cadetblue;
+        }
+        h2{
+            color: blue;
+            background-color: crimson;
+            text-align: center;
+            font-size: 50px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+        }
+        h3{
+            color: darkblue;
+            font-size: 20px;
+            font-family: serif ;
+ 
+        }
+        input{
+            color: cyan;
+            background-color: wheat;
+            font-size: 20px;
+            font-family: fantasy;
+            font-style: initial;
+        }
+        .quiz{
+            color: teal;
+            font-size: 14px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        input:hover{
+            color: darkgreen;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Top 5 Performances of Michael Phelps</h1>
+    <table>
+        <tr>
+            <th>Rank</th>
+            <th>Year</th>
+            <th>Place</th>
+            <th>Event</th>
+            <th>Record</th>
+        </tr>
+        <tr>
+            <td class="edit">1</td>
+            <td>2008</td>
+            <td>Beijing, China</td>
+            <td>100m Butterfly</td>
+            <td>50.58sec</td>
+        </tr>
+        <tr>
+            <td class="edit">2</td>
+            <td>2009</td>
+            <td>Berlin, Germany</td>
+            <td>100m Butterfly</td>
+            <td>50.55sec</td>
+        </tr>
+        <tr>
+            <td class="edit">3</td>
+            <td>2008</td>
+            <td>Beijing, China</td>
+            <td>200m Butterfly</td>
+            <td>1min 52.03sec</td>
+        </tr>
+        <tr>
+            <td class="edit">4</td>
+            <td>2008</td>
+            <td>Beijing, China</td>
+            <td>400m Individual Medley</td>
+            <td>4min 03.84sec</td>
+        </tr>
+        <tr>
+            <td class="edit">5</td>
+            <td>2000</td>
+            <td>Sydney, Australia</td>
+            <td>200m Butterfly</td>
+            <td>1min 56.87sec</td>
+        </tr>
+    </table>
+    <h2>Quiz</h2>
+    <h3>1. When was Michael Phelps born?</h3>
+    <input type="radio" name="Question1" >21st August, 1995<br>
+    <input type="radio" name="Question1" >12th August, 1986<br>
+    <input type="radio" name="Question1" id="correct1">30th June, 1985<br>
+    <input type="radio" name="Question1" >21st September, 1984<br>
+    <h3>2. What is the total olympic Medals earned by Michael Phelps?</h3>
+    <input type="radio" name="Question2" id="correct2">28<br>
+    <input type="radio" name="Question2" >32<br>
+    <input type="radio" name="Question2" >24<br>
+    <input type="radio" name="Question2" >19<br>
+    <h3>3. What is the highest Olympic Gold Medals earned by Michael Phelps?</h3>
+    <input type="radio" name="Question3" >3<br>
+    <input type="radio" name="Question3" id="correct3">9<br>
+    <input type="radio" name="Question3" >5<br>
+    <input type="radio" name="Question3" >10<br><br>
+    <input type="submit" name="submit" value="Submit" onclick="result()"><br><br><br>
+    <script type="text/javascript">
+        function result(){
+            var score=0;
+            if(document.getElementById('correct1').checked)
+            {
+                score=score+1;
+            }
+            if(document.getElementById('correct2').checked)
+            {
+                score=score+1;
+            }
+            if(document.getElementById('correct3').checked)
+            {
+                score=score+1;
+            }
+            alert("Your Score is="+score+"/3");   
+        }
+    </script>
+    <a href="athlete.html">Back</a>
+</body>
+</html>

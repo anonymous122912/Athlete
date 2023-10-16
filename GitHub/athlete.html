@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Top 10 Favourite Athletes</title>
+    <style>
+        @keyframes slide_left{
+            from{
+                margin-left: 0%;
+            }
+            to{
+                margin-left: 74%;
+            }
+        }
+        @keyframes slide_right{
+            from{
+                margin-left: 73%;
+            }
+            to{
+                margin-left: 0%;
+            }
+        }
+        @keyframes animate1{
+            100%{
+                height: 240px;
+            }
+        }
+        @keyframes animate2{
+            100%{
+                height: 790px;
+            }
+        }
+        @keyframes animate3{
+            100%{
+                height: 754px;
+            }
+        }
+        @keyframes animate4{
+            100%{
+                height: 68px;
+            }
+        }
+        @keyframes animate5{
+            100%{
+                height: 335px;
+            }
+        }
+        @keyframes animate6{
+            100%{
+                height: 140px;
+            }
+        }
+        @keyframes animate7{
+            100%{
+                height: 210px;
+            }
+        }
+        @keyframes animate8{
+            100%{
+                height: 64px;
+            }
+        }
+        @keyframes animate9{
+            100%{
+                height: 210px;
+            }
+        }
+        @keyframes animate10{
+            100%{
+                height: 290px;
+            }
+        }
+        body{
+            background-color: chocolate;
+            padding: 5px;
+            border-block: 2px red;
+            width: 1400px;
+        }
+        h1{
+            color: blue;
+            font-size: 50px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            background-color: aqua;
+            border: 10px solid blueviolet;
+            padding: 35px;
+        }
+        h2{
+            color: #612;
+            font-size: 30px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+            width: 25%;
+            background-color: #666;
+            padding: 20px;
+            border: blue solid 3px;
+            animation-duration: 5s;
+            animation-name: slide_right;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        img{
+            background-color: yellow;
+            margin-left: 35%;
+            width: 25%;
+            padding: 10px;
+            border: #100 solid 2px;
+            animation-duration: 5s;
+            animation-name: slide_left;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        .image1{
+            background-color: green;
+            width: 50px;
+            padding: 2px;
+            border: #100 solid 2px;
+            animation: none;
+            margin-left: 0px;
+        }
+        p{
+            color: brown;
+            font-size: 25px;
+        }
+        a{
+            background-color: aquamarine;
+            color: purple;
+            border: #345 1px solid;
+        }
+        a:hover{
+            background-color: chartreuse;
+            color: royalblue;
+            border: #321 1px solid;
+        }
+        hr{
+            color: #100;
+        }
+        .container{
+            position: relative;
+            left: 60px;
+            width: 1350px;
+            height: 1000px;
+            background-color: goldenrod;
+            border: 2px solid blue;
+            border-top: none;
+            border-right: none;
+            z-index: 0;
+        }
+        .meterBox{
+            position: relative;
+            top: 0px;
+            left: -30px;
+            width: 1350px;
+            height: 1000px;
+            z-index: 100;
+        }
+        .meterBox li{
+            position: relative;
+            top: 0px;
+            left: -15px;
+            height: 100px;
+            border-bottom: solid 1px #244;
+        }
+        .meterBox li::before{
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: -30px;
+            height: 100%;
+            border-bottom: solid 1px #244;
+            transform: skewY(45deg);
+            width: 30px;
+        }
+        .meterBox li div{
+            position: absolute;
+            width: 80px;
+            font-size: 20px;
+            left: -60px;
+            padding-top: 50px;
+            color: green;
+            text-align: left;
+        }
+        .bar1{
+            width: 65px;
+            height: 0%;
+            background-color: aqua;
+            position: absolute;
+            left: 65px;
+            bottom: 5px;
+            z-index: 1000;
+            color: crimson;
+            font: bold;
+            font-size: 20px;
+            text-align: center;
+            animation: animate1 3s cubic-bezier(1,0,0.1,1) forwards;
+            animation-iteration-count: infinite;
+        }
+        .bar1::after{
+            content: '';
+            width: 65px;
+            height: 20px;
+            background-color: aquamarine;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            transform: skewX(45deg);
+        }
+        .bar1::before{
+            content: '';
+            width: 20px;
+            height: 100%;
+            background-color: #249;
+            position: absolute;
+            left: -20px;
+            top: -10px;
+            bottom: 5px;
+            transform: skewY(45deg);
+        }
+        .bar2{
+            width: 65px;
+            height: 0%;
+            background-color: aqua;
+            position: absolute;
+            left: 195px;
+            bottom: 5px;
+            z-index: 1000;
+            color: crimson;
+            font: bold;
+            font-size: 20px;
+            text-align: center;
+            animation: animate2 3s cubic-bezier(1,0,0.1,1) forwards;
+            animation-iteration-count: infinite;
+        }
+        .bar2::after{
+            content: '';
+            width: 65px;
+            height: 20px;
+            background-color: aquamarine;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            transform: skewX(45deg);
+        }
+        .bar2::before{
+            content: '';
+            width: 20px;
+            height: 100%;
+            background-color: #249;
+            position: absolute;
+            left: -20px;
+            top: -10px;
+            bottom: 5px;
+            transform: skewY(45deg);
+        }
+        .bar3{
+            width: 65px;
+            height: 0%;
+            background-color: aqua;
+            position: absolute;
+            left: 325px;
+            bottom: 5px;
+            z-index: 1000;
+            color: crimson;
+            font: bold;
+            font-size: 20px;
+            text-align: center;
+            animation: animate3 3s cubic-bezier(1,0,0.1,1) forwards;
+            animation-iteration-count: infinite;
+        }
+        .bar3::after{
+            content: '';
+            width: 65px;
+            height: 20px;
+            background-color: aquamarine;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            transform: skewX(45deg);
+        }
+        .bar3::before{
+            content: '';
+            width: 20px;
+            height: 100%;
+            background-color: #249;
+            position: absolute;
+            left: -20px;
+            top: -10px;
+            bottom: 5px;
+            transform: skewY(45deg);
+        }
+        .bar4{
+            width: 65px;
+            height: 0%;
+            background-color: aqua;
+            position: absolute;
+            left: 455px;
+            bottom: 5px;
+            z-index: 1000;
+            color: crimson;
+            font: bold;
+            font-size: 20px;
+            text-align: center;
+            animation: animate4 3s cubic-bezier(1,0,0.1,1) forwards;
+            animation-iteration-count: infinite;
+        }
+        .bar4::after{
+            content: '';
+            width: 65px;
+            height: 20px;
+            background-color: aquamarine;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            transform: skewX(45deg);
+        }
+        .bar4::before{
+            content: '';
+            width: 20px;
+            height: 100%;
+            background-color: #249;
+            position: absolute;
+            left: -20px;
+            top: -10px;
+            bottom: 5px;
+            transform: skewY(45deg);
+        }
+        .bar5{
+            width: 65px;
+            height: 0%;
+            background-color: aqua;
+            position: absolute;
+            left: 585px;
+            bottom: 5px;
+            z-index: 1000;
+            color: crimson;
+            font: bold;
+            font-size: 20px;
+            text-align: center;
+            animation: animate5 3s cubic-bezier(1,0,0.1,1) forwards;
+            animation-iteration-count: infinite;
+        }
+        .bar5::after{
+            content: '';
+            width: 65px;
+            height: 20px;
+            background-color: aquamarine;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            transform: skewX(45deg);
+        }
+        .bar5::before{
+            content: '';
+            width: 20px;
+            height: 100%;
+            background-color: #249;
+            position: absolute;
+            left: -20px;
+            top: -10px;
+            bottom: 5px;
+            transform: skewY(45deg);
+        }
+        .bar6{
+            width: 65px;
+            height: 0%;
+            background-color: aqua;
+            position: absolute;
+            left: 715px;
+            bottom: 5px;
+            z-index: 1000;
+            color: crimson;
+            font: bold;
+            font-size: 20px;
+            text-align: center;
+            animation: animate6 3s cubic-bezier(1,0,0.1,1) forwards;
+            animation-iteration-count: infinite;
+        }
+        .bar6::after{
+            content: '';
+            width: 65px;
+            height: 20px;
+            background-color: aquamarine;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            transform: skewX(45deg);
+        }
+        .bar6::before{
+            content: '';
+            width: 20px;
+            height: 100%;
+            background-color: #249;
+            position: absolute;
+            left: -20px;
+            top: -10px;
+            bottom: 5px;
+            transform: skewY(45deg);
+        }
+        .bar7{
+            width: 65px;
+            height: 0%;
+            background-color: aqua;
+            position: absolute;
+            left: 845px;
+            bottom: 5px;
+            z-index: 1000;
+            color: crimson;
+            font: bold;
+            font-size: 20px;
+            text-align: center;
+            animation: animate7 3s cubic-bezier(1,0,0.1,1) forwards;
+            animation-iteration-count: infinite;
+        }
+        .bar7::after{
+            content: '';
+            width: 65px;
+            height: 20px;
+            background-color: aquamarine;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            transform: skewX(45deg);
+        }
+        .bar7::before{
+            content: '';
+            width: 20px;
+            height: 100%;
+            background-color: #249;
+            position: absolute;
+            left: -20px;
+            top: -10px;
+            bottom: 5px;
+            transform: skewY(45deg);
+        }
+        .bar8{
+            width: 65px;
+            height: 0%;
+            background-color: aqua;
+            position: absolute;
+            left: 975px;
+            bottom: 5px;
+            z-index: 1000;
+            color: crimson;
+            font: bold;
+            font-size: 20px;
+            text-align: center;
+            animation: animate8 3s cubic-bezier(1,0,0.1,1) forwards;
+            animation-iteration-count: infinite;
+        }
+        .bar8::after{
+            content: '';
+            width: 65px;
+            height: 20px;
+            background-color: aquamarine;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            transform: skewX(45deg);
+        }
+        .bar8::before{
+            content: '';
+            width: 20px;
+            height: 100%;
+            background-color: #249;
+            position: absolute;
+            left: -20px;
+            top: -10px;
+            bottom: 5px;
+            transform: skewY(45deg);
+        }
+        .bar9{
+            width: 65px;
+            height: 0%;
+            background-color: aqua;
+            position: absolute;
+            left: 1105px;
+            bottom: 5px;
+            z-index: 1000;
+            color: crimson;
+            font: bold;
+            font-size: 20px;
+            text-align: center;
+            animation: animate9 3s cubic-bezier(1,0,0.1,1) forwards;
+            animation-iteration-count: infinite;
+        }
+        .bar9::after{
+            content: '';
+            width: 65px;
+            height: 20px;
+            background-color: aquamarine;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            transform: skewX(45deg);
+        }
+        .bar9::before{
+            content: '';
+            width: 20px;
+            height: 100%;
+            background-color: #249;
+            position: absolute;
+            left: -20px;
+            top: -10px;
+            bottom: 5px;
+            transform: skewY(45deg);
+        }
+        .bar10{
+            width: 65px;
+            height: 0%;
+            background-color: aqua;
+            position: absolute;
+            left: 1235px;
+            bottom: 5px;
+            z-index: 1000;
+            color: crimson;
+            font: bold;
+            font-size: 20px;
+            text-align: center;
+            animation: animate10 3s cubic-bezier(1,0,0.1,1) forwards;
+            animation-iteration-count: infinite;
+        }
+        .bar10::after{
+            content: '';
+            width: 65px;
+            height: 20px;
+            background-color: aquamarine;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            transform: skewX(45deg);
+        }
+        .bar10::before{
+            content: '';
+            width: 20px;
+            height: 100%;
+            background-color: #249;
+            position: absolute;
+            left: -20px;
+            top: -10px;
+            bottom: 5px;
+            transform: skewY(45deg);
+        }
+    </style>
+</head>
+<body>
+    <h1>My Top 10 Favourite Athletes</h1>
+    <hr>
+    <h2>1. Usain Bolt</h2>
+    <img src="images/bolt.jpg" alt="" width="300">
+    <p>Usain St. Leo Bolt (born 21 August 1986) is a Jamaican retired sprinter, widely considered to be the greatest sprinter of all time. He is the world record holder in the 100 metres, 200 metres, and 4 × 100 metres relay.
+    </p>
+    <p><a href="bolt.html">Click here</a> to view top 5 performances of Usain Bolt</p>
+    <hr>
+    <h2>2. Cristiano Ronaldo</h2>
+    <img src="images/ronaldo.jpg" alt="" width="300">
+    <p>Cristiano Ronaldo dos Santos Aveiro (born 5 February 1985) is a Portuguese professional footballer who plays as a forward for and captains both Saudi Professional League club Al Nassr and the Portugal national team. Widely regarded as one of the greatest players of all time, Ronaldo has won five Ballon d'Or awards and four European Golden Shoes, the most by a European player. He has won 32 trophies in his career, including seven league titles, five UEFA Champions Leagues, the UEFA European Championship and the UEFA Nations League. Ronaldo holds the records for most appearances (183), goals (140) and assists (42) in the Champions League, goals in the European Championship (14), international goals (123) and international appearances (200). He is one of the few players to have made over 1,100 professional career appearances, and has scored over 800 official senior career goals for club and country, making him the highest goal-scorer of all time according to the IFFHS. He is the only player to score in five different FIFA World Cup tournaments.
+    </p>
+    <p><a href="cr7.html">Click here</a> to view top 5 performances of Cristiano Ronaldo</p>
+    <hr>
+    <h2>3. Lionel Messi</h2>
+    <img src="images/messi.jpg" alt="" width="300">
+    <p>Lionel Andrés Messi (born 24 June 1987), also known as Leo Messi, is an Argentine professional footballer who plays as a forward for and captains the Argentina national team. Widely regarded as one of the greatest players of all time, Messi has won a record seven Ballon d'Or awards and a record six European Golden Shoes, and in 2020 he was named to the Ballon d'Or Dream Team. Until leaving the club in 2021, he had spent his entire professional career with Barcelona, where he won a club-record 34 trophies, including ten La Liga titles, seven Copa del Rey titles and the UEFA Champions League four times. With his country, he won the 2021 Copa América and the 2022 FIFA World Cup. A prolific goalscorer and creative playmaker, Messi holds the records for most goals in La Liga (474), most hat-tricks in La Liga (36) and the UEFA Champions League (eight), and most assists in La Liga (192) and the Copa América (17). He also has the most international goals by a South American male (103). Messi has scored over 800 senior career goals for club and country, and has the most goals by a player for a single club (672).
+    </p>
+    <p><a href="lm10.html">Click here</a> to view top 5 performances of Lionel Messi</p>
+    <hr>
+    <h2>4. Michael Phelps</h2>
+    <img src="images/phelps.jpg" alt="" width="300">
+    <p>Michael Fred Phelps II (born June 30, 1985) is an American former competitive swimmer. He is the most successful and most decorated Olympian of all time with a total of 28 medals. Phelps also holds the all-time records for Olympic gold medals (23), Olympic gold medals in individual events (13), and Olympic medals in individual events (16). At the 2004 Summer Olympics in Athens, Phelps tied the record of eight medals of any color at a single Games, held by gymnast Alexander Dityatin, by winning six gold and two bronze medals. Four years later, when he won eight gold medals at the 2008 Beijing Games, he broke fellow American swimmer Mark Spitz's 1972 record of seven first-place finishes at any single Olympic Games. At the 2012 Summer Olympics in London, Phelps won four gold and two silver medals, and at the 2016 Summer Olympics in Rio de Janeiro, he won five gold medals and one silver. This made him the most successful athlete of the Games for the fourth Olympics in a row.
+    </p>
+    <p><a href="phelps.html">Click here</a> to view top 5 performances of Michael Phelps</p>
+    <hr>
+    <h2>5. Michael Jordan</h2>
+    <img src="images/Jordan.jpg" alt="" width="300">
+    <p>Michael Jeffrey Jordan (born February 17, 1963), also known by his initials MJ, is an American former professional basketball player and businessman. The official National Basketball Association (NBA) website states: "By acclamation, Michael Jordan is the greatest basketball player of all time." He played fifteen seasons in the NBA, winning six NBA championships with the Chicago Bulls. Jordan is the principal owner and chairman of the Charlotte Hornets of the NBA and of 23XI Racing in the NASCAR Cup Series. He was integral in popularizing the sport of basketball and the NBA around the world in the 1980s and 1990s, becoming a global cultural icon.
+    </p>
+    <p><a href="jordan.html">Click here</a> to view top 5 performances of Michael Jordan</p>
+    <hr>
+    <h2>6. Muhammad Ali</h2>
+    <img src="images/muhammad_ali.jpg" alt="" width="300">
+    <p>Muhammad Ali born Cassius Marcellus Clay Jr.; (January 17, 1942 – June 3, 2016) was an American professional boxer and activist. Nicknamed "The Greatest", he is regarded as one of the most significant sports figures of the 20th century and is often regarded as the greatest heavyweight boxer of all time. In 1999, he was named Sportsman of the Century by Sports Illustrated and the Sports Personality of the Century by the BBC.
+    </p>
+    <p><a href="mdali.html">Click here</a> to view top 5 performances of Muhammad Ali</p>
+    <hr>
+    <h2>7. Roger Federer</h2>
+    <img src="images/roger.jpg" alt="" width="300">
+    <p>Roger Federer (born 8 August 1981) is a Swiss former professional tennis player. He was ranked world No. 1 in singles by the Association of Tennis Professionals (ATP) for 310 weeks, including a record 237 consecutive weeks, and finished as the year-end No. 1 five times. He won 103 singles titles on the ATP Tour, the second most of all time, including 20 major men's singles titles, a record eight men's singles Wimbledon titles, an Open Era joint-record five men's singles US Open titles, and a joint-record six year-end championships. In his home country, he is regarded as "the greatest and most successful" Swiss sportsperson in history.
+    </p>
+    <p><a href="roger.html">Click here</a> to view top 5 performances of Roger Federer</p>
+    <hr>
+    <h2>8. Tiger Woods</h2>
+    <img src="images/woods.jpg" alt="" width="300">
+    <p>Eldrick Tont "Tiger" Woods (born December 30, 1975) is an American professional golfer. He is tied for first in PGA Tour wins, ranks second in men's major championships, and holds numerous golf records. Woods is widely regarded as one of the greatest golfers of all time and is one of the most famous athletes in modern history. He is an inductee of the World Golf Hall of Fame.
+    </p>
+    <p><a href="woods.html">Click here</a> to view top 5 performances of Tiger Woods</p>
+    <hr>
+    <h2>9. Sania Mirza</h2>
+    <img src="images/Sania.jpg" alt="" width="300">
+    <p>Sania Mirza (born 15 November 1986) is an Indian former professional tennis player. A former doubles world No. 1, she won six major titles – three in women's doubles and three in mixed doubles. From 2003 until her retirement from singles in 2013, she was ranked by the Women's Tennis Association as the No. 1 Indian in singles. Throughout her career, Mirza has established herself as one of the most known, highest-paid, and influential athletes in India.
+    </p>
+    <p><a href="sania.html">Click here</a> to view top 5 performances of Sania Mirza</p>
+    <hr>
+    <h2>10. Yuvraj Singh</h2>
+    <img src="images/yuvraj.jpg" alt="" width="300">
+    <p>Yuvraj Singh (born 12 December 1981) is a former Indian international cricketer who played in all formats of the game. He is an all-rounder who batted left-handed in the middle order and bowled slow left-arm orthodox . He has won 7 Player of the Series awards in ODI cricket, which is joint 3rd highest by an Indian, shared with former Indian captain Sourav Ganguly. He is also the son of former Indian fast bowler and Punjabi actor Yograj Singh.
+    </p>
+    <p><a href="yuvi.html">Click here</a> to view top 5 performances of Yuvraj Singh</p>
+    <hr>
+    <h1>Fan Followers Graph Chart</h1>
+    <div class="container">
+        <div class="bar1"><img src="images/bolt_bar.jpg" alt="" width="100" class="image1"> Bolt </div>
+        <div class="bar2"><img src="images/ronaldo_bar.jpg" alt="" width="100" class="image1"> CR7</div>
+        <div class="bar3"><img src="images/messi_bar.jpg" alt="" width="100" class="image1"> LM10</div>
+        <div class="bar4"><img src="images/phelps_bar.jpg" alt="" width="100" class="image1"> Phelps</div>
+        <div class="bar5"><img src="images/jordan_bar.jpg" alt="" width="100" class="image1"> Jordan</div>
+        <div class="bar6"><img src="images/muhammad_ali_bar.jpg" alt="" width="100" class="image1"> Md. Ali</div>
+        <div class="bar7"><img src="images/roger_bar.jpg" alt="" width="100" class="image1"> Roger</div>
+        <div class="bar8"><img src="images/woods_bar.jpg" alt="" width="100" class="image1"> Woods</div>
+        <div class="bar9"><img src="images/sania_bar.jpg" alt="" width="100" class="image1"> Sania</div>
+        <div class="bar10"><img src="images/yuvraj_bar.jpg" alt="" width="100" class="image1"> Yuvi</div>
+    
+        <ul class="meterBox">
+            <li><div>1000M</div></li>
+            <li><div>640M</div></li>
+            <li><div>320M</div></li>
+            <li><div>160M</div></li>
+            <li><div>80M</div></li>
+            <li><div>40M</div></li>
+            <li><div>20M</div></li>
+            <li><div>10M</div></li>
+            <li><div>5M</div></li>
+        </ul>
+    </div>
+    <br>
+    <hr>
+</body>
+</html>
